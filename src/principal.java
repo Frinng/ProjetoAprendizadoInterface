@@ -9,6 +9,11 @@ public class principal {
         tela.setSize(1000,700);
         tela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+         JTextField textonepae = new JTextField();
+         textonepae.setBounds(50,30,200,30);
+         tela.add(textonepae);
+
+
 
         tela.setVisible(true);
     }
