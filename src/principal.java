@@ -4,9 +4,12 @@ import java.awt.event.ActionListener;//esta biblioteca serve para receber os dad
 
 public class principal {
     public static void main(String[] args) {
-
+        //Cria a janela(frame/tela)
         JFrame tela = new JFrame("Teste de Interface");
-        tela.setSize(300,200);
+        tela.setSize(1000,700);
         tela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+
+        tela.setVisible(true);
     }
 }
