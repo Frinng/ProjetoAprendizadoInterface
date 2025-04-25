@@ -5,27 +5,26 @@ import java.awt.event.ActionListener;//esta biblioteca serve para receber os dad
 public class principal {
     public static void main(String[] args) {
         //Cria a janela(frame/tela)
-        JFrame tela = new JFrame("Teste de Interface");
+        JFrame tela = new JFrame("POWER UP AUTOPEÇAS");
         tela.setSize(1000,700);
         tela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        tela.setLayout(null);
 
-        // Cria um campo de texto para o viado do usuario
-         JTextField textonepae = new JTextField();
-         textonepae.setBounds(50,30,200,30);
-         tela.add(textonepae);
+        //BUtao kkkkkkk,butao de cadastrar um novo veiculo
+        JButton cadastro_de_veiculos = new JButton("1-Cadastrar um novo Veiculo");//botao para  cadastrar veiculos
+        cadastro_de_veiculos.setBounds(400, 200, 200, 40);
+        tela.add(cadastro_de_veiculos);
 
-         //cria um butao kkkkkkkkkkk
-         JButton butao = new JButton("O LOBATO É GAY");
-         butao.setBounds(90,80,120,30);
-         tela.add(butao);
+         //Butao para contratar servicos
+        JButton contratar_servicos = new JButton("2-Contratar Nosssos Servicos");//botao apra contratar os servicos da autopecas
+        contratar_servicos.setBounds(400,260,200,40);
+        tela.add(contratar_servicos);
 
-         butao.addActionListener(new ActionListener() {
-             public void actionPerformed(ActionEvent e) {
-                String textoagoraofc = textonepae.getText();
-                JOptionPane.showMessageDialog(tela, "Voce digitou: "+textoagoraofc);
-             }
-         });
+        //butao para sair
+        JButton sair = new JButton("3-Sair");//bem autoexplicativo ne
+        sair.setBounds(400,320,200,40);
+        tela.add(sair);
 
-         tela.setVisible(true);
+        tela.setVisible(true);
     }
 }

@@ -1,30 +1,40 @@
 import javax.swing.*;
+import java.awt.event.*;
 
 public class Exemplo {
     public static void main(String[] args) {
-        // Criar a janela
-        JFrame janela = new JFrame("Minha Primeira Interface");
-        janela.setSize(300, 200);
-        janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        janela.setLayout(null); // Layout livre
+        // Cria a janela
+        JFrame tela = new JFrame("POWER UP AUTOPEÇAS");
+        tela.setSize(1000, 700);
+        tela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        tela.setLayout(null);
 
-        // Criar um campo de texto
-        JTextField campoTexto = new JTextField();
-        campoTexto.setBounds(50, 30, 200, 30);
-        janela.add(campoTexto);
+        // Botão 1 - Clientes
+        JButton btnClientes = new JButton("Clientes");
+        btnClientes.setBounds(400, 200, 200, 40);
+        tela.add(btnClientes);
 
-        // Criar um botão
-        JButton botao = new JButton("Clique aqui");
-        botao.setBounds(90, 80, 120, 30);
-        janela.add(botao);
+        // Botão 2 - Produtos
+        JButton btnProdutos = new JButton("Produtos");
+        btnProdutos.setBounds(400, 260, 200, 40);
+        tela.add(btnProdutos);
 
-        // Ação do botão
-        botao.addActionListener(e -> {
-            String texto = campoTexto.getText();
-            JOptionPane.showMessageDialog(janela, "Você digitou: " + texto);
-        });
+        // Botão 3 - Vendas
+        JButton btnVendas = new JButton("Vendas");
+        btnVendas.setBounds(400, 320, 200, 40);
+        tela.add(btnVendas);
 
-        // Tornar a janela visível
-        janela.setVisible(true);
+        // Botão 4 - Sair
+        JButton btnSair = new JButton("Sair");
+        btnSair.setBounds(400, 380, 200, 40);
+        tela.add(btnSair);
+
+        // Ações dos botões
+        btnClientes.addActionListener(e -> JOptionPane.showMessageDialog(tela, "Menu Clientes selecionado."));
+        btnProdutos.addActionListener(e -> JOptionPane.showMessageDialog(tela, "Menu Produtos selecionado."));
+        btnVendas.addActionListener(e -> JOptionPane.showMessageDialog(tela, "Menu Vendas selecionado."));
+        btnSair.addActionListener(e -> System.exit(0));
+
+        tela.setVisible(true);
     }
 }
