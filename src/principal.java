@@ -26,18 +26,13 @@ public class principal {
         fundodetela.setBounds(0,0,1000,700);
         fundodetela.setLayout(null);
 
-        ImageIcon imagemcadastro = new ImageIcon("fundobotao.png");
-        ImageIcon imagemcontratarservicos = new ImageIcon("fundobotao.png");
-        ImageIcon imagemsair = new ImageIcon("fundobotao.png");
-
-
         //BUtao kkkkkkk,butao de cadastrar um novo veiculo
         JButton cadastro_de_veiculos = new JButton("1-Cadastrar um novo Veiculo");//botao para  cadastrar veiculos
         cadastro_de_veiculos.setBounds(400, 200, 200, 40);
-        cadastro_de_veiculos.setIcon(imagemcadastro);
+        cadastro_de_veiculos.setForeground(Color.WHITE);
+        cadastro_de_veiculos.setBackground(Color.BLACK);
         cadastro_de_veiculos.setHorizontalTextPosition(SwingConstants.CENTER);
         cadastro_de_veiculos.setVerticalTextPosition(SwingConstants.BOTTOM);
-        cadastro_de_veiculos.setForeground(Color.WHITE);
         cadastro_de_veiculos.setFocusPainted(false);// Remove o foco (contorno quando clicado)
         cadastro_de_veiculos.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         fundodetela.add(cadastro_de_veiculos);
@@ -45,10 +40,10 @@ public class principal {
          //Butao para contratar servicos
         JButton contratar_servicos = new JButton("2-Nossos Servicos");//botao apra contratar os servicos da autopecas
         contratar_servicos.setBounds(400,260,200,40);
-        contratar_servicos.setIcon(imagemcontratarservicos);
+        contratar_servicos.setForeground(Color.WHITE);
+        contratar_servicos.setBackground(Color.BLACK);
         contratar_servicos.setHorizontalTextPosition(SwingConstants.CENTER);
         contratar_servicos.setVerticalTextPosition(SwingConstants.BOTTOM);
-        contratar_servicos.setForeground(Color.WHITE);
         contratar_servicos.setFocusPainted(false);// Remove o foco (contorno quando clicado)
         contratar_servicos.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         fundodetela.add(contratar_servicos);
@@ -56,18 +51,18 @@ public class principal {
         //butao para sair
         JButton sair = new JButton("3-Sair");//bem autoexplicativo ne
         sair.setBounds(400,320,200,40);
-        sair.setIcon(imagemsair);
+        sair.setForeground(Color.WHITE);
+        sair.setBackground(Color.BLACK);
         sair.setHorizontalTextPosition(SwingConstants.CENTER);
         sair.setVerticalTextPosition(SwingConstants.BOTTOM);
-        sair.setForeground(Color.WHITE);
         sair.setFocusPainted(false);// Remove o foco (contorno quando clicado)
         sair.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         fundodetela.add(sair);
 
         sair.addActionListener(e -> System.exit(0));
+
         tela.setContentPane(fundodetela);//imagem de fundo
         fundodetela.setLayout(null);
-
         tela.setResizable(false);
         tela.setLocationRelativeTo(null);
         tela.setVisible(true);
