@@ -26,6 +26,6 @@ public class principal {
              }
          });
 
-        tela.setVisible(true);
+         tela.setVisible(true);
     }
 }
