@@ -12,6 +12,9 @@ public class Carro {
     }
     @Override //Permite personalizar comportamento de métodos existentes
     public String toString(){
-        return "Proprietário: "+nome+" modelo: "+modelo+" ano: "+ano+"placa: "+placa;
+        return "Proprietário: "+nome+
+                " modelo: "+modelo+
+                " ano: "+ano+
+                "placa: "+placa;
     }
 }
