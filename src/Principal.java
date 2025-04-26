@@ -1,10 +1,9 @@
 import javax.swing.*; //esta biblioteca serve para criar interface grafica //Criar os elementos da interface gráfica
-import java.awt.event.ActionEvent; //esta biblioteca serve para responder o usuario //	Representa o evento (clique, etc.)
-import java.awt.event.ActionListener;//esta biblioteca serve para receber os dados do usuario//Permite programar a reação ao evento
 import java.awt.*;// Biblioteca de layout e manipulação de gráficos
+import java.util.Scanner;
 
 
-public class principal {
+public class Principal {
     public static void main(String[] args) {
         //Cria a janela(frame/tela)
         JFrame tela = new JFrame("POWER UP AUTOPEÇAS");
@@ -59,6 +58,7 @@ public class principal {
         sair.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         fundodetela.add(sair);
 
+        cadastro_de_veiculos.addActionListener(e -> Cadastrodeveiculos());
         sair.addActionListener(e -> System.exit(0));
 
         tela.setContentPane(fundodetela);//imagem de fundo
@@ -66,5 +66,27 @@ public class principal {
         tela.setResizable(false);
         tela.setLocationRelativeTo(null);
         tela.setVisible(true);
+    }
+    public static void Cadastrodeveiculos(){
+     JFrame telacadastro = new JFrame("Cadastro de veiculos");
+     telacadastro.setSize(1000,700);
+     telacadastro.setLayout(new FlowLayout());
+
+     JLabel nomedodono = new JLabel("Digite o Nome Completo do Proprietário do veiculo: ");
+     JTextField camponome = new JTextField(50);
+
+     JLabel modelocarro = new JLabel("Digite o modelo do carro: ");
+     JTextField campomodelo = new JTextField(50);
+
+     JLabel anocarro = new JLabel("Digite o ano do carro");
+     JTextField campoano = new JTextField(10);
+
+     JLabel placacarro = new JLabel("Digite a placa do carro: ");
+     JTextField campocplaca = new JTextField(10);
+
+     JButton botaoconfimar = new JButton("Confirmar");
+     botaoconfimar.addActionListener(e -> JOptionPane.showMessageDialog(null,"Veiculo cadastrado com sucesso"));
+
+     telacadastro.setVisible(true);
     }
 }
