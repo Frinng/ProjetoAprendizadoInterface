@@ -1,4 +1,4 @@
-import javax.swing.*; //esta biblioteca serve para criar interface grafica //Criar os elementos da interface gráfica
+/* import javax.swing.*; //esta biblioteca serve para criar interface grafica //Criar os elementos da interface gráfica
 import java.awt.*;// Biblioteca de layout e manipulação de gráficos
 import java.util.Scanner;
 
@@ -90,3 +90,5 @@ public class Principal {
      telacadastro.setVisible(true);
     }
 }
+\*
+ */
