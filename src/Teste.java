@@ -128,6 +128,13 @@ public class Teste {
         telacadastro.add(campocplaca);
 
         JButton botaoconfimar = new JButton("Confirmar");
+        botaoconfimar.setBounds(400,470,200,40);
+        botaoconfimar.setHorizontalTextPosition(SwingConstants.CENTER);
+        botaoconfimar.setVerticalTextPosition(SwingConstants.BOTTOM);
+        botaoconfimar.setFocusPainted(false);
+        botaoconfimar.setBackground(Color.BLACK);
+        botaoconfimar.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+        telacadastro.add(botaoconfimar);
         botaoconfimar.addActionListener(e -> JOptionPane.showMessageDialog(null,"Veiculo cadastrado com sucesso"));
 
         telacadastro.add(fundodetela);
