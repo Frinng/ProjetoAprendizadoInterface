@@ -1,8 +1,9 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class Teste {
+public class Principal {
     static JFrame tela; //tela fixa
+    static java.util.List<Carro> listacarros = new java.util.ArrayList<>();
 
     public static void main(String[] args) {
         tela = new JFrame("Power Up Autopeças");
@@ -135,7 +136,15 @@ public class Teste {
         botaoconfimar.setBackground(Color.BLACK);
         botaoconfimar.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         telacadastro.add(botaoconfimar);
-        botaoconfimar.addActionListener(e -> JOptionPane.showMessageDialog(null,"Veiculo cadastrado com sucesso"));
+        botaoconfimar.addActionListener(e -> {
+            String nome = camponome.getText();
+            String modelo = campomodelo.getText();
+            String ano = campoano.getText();
+            String placa = campocplaca.getText();
+            Carro novocarro = new Carro(nome,modelo,ano,placa);
+            listacarros.add(novocarro);
+            JOptionPane.showMessageDialog(null,"Veiculo Cadastrado com Sucesso.");
+        });
 
         JButton botaovoltar = new JButton("Voltar ao inicio");
         botaovoltar.setBounds(400,520,200,40);
@@ -145,6 +154,7 @@ public class Teste {
         botaovoltar.setBackground(Color.BLACK);
         botaovoltar.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         telacadastro.add(botaovoltar);
+        botaovoltar.addActionListener(e -> telainical());
 
         telacadastro.add(fundodetela);
 
@@ -153,4 +163,5 @@ public class Teste {
         tela.setLocationRelativeTo(null);
         tela.setVisible(true);
     }
+
 }
