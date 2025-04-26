@@ -108,7 +108,7 @@ public class Teste {
         modelocarro.setForeground(Color.WHITE);
         telacadastro.add(modelocarro);
         JTextField campomodelo = new JTextField(50);
-        campomodelo.setBounds(300,258,300,20);
+        campomodelo.setBounds(325,258,300,20);
         telacadastro.add(campomodelo);
 
         JLabel anocarro = new JLabel("Digite o ano do carro: ");
@@ -116,7 +116,7 @@ public class Teste {
         anocarro.setForeground(Color.WHITE);
         telacadastro.add(anocarro);
         JTextField campoano = new JTextField(50);
-        campoano.setBounds(280,330,300,20);
+        campoano.setBounds(325,330,300,20);
         telacadastro.add(campoano);
 
         JLabel placacarro = new JLabel("Digite a placa do carro: ");
@@ -124,7 +124,7 @@ public class Teste {
         placacarro.setForeground(Color.WHITE);
         telacadastro.add(placacarro);
         JTextField campocplaca = new JTextField(50);
-        campocplaca.setBounds(290,399,300,20);
+        campocplaca.setBounds(325,399,300,20);
         telacadastro.add(campocplaca);
 
         JButton botaoconfimar = new JButton("Confirmar");
@@ -136,6 +136,15 @@ public class Teste {
         botaoconfimar.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         telacadastro.add(botaoconfimar);
         botaoconfimar.addActionListener(e -> JOptionPane.showMessageDialog(null,"Veiculo cadastrado com sucesso"));
+
+        JButton botaovoltar = new JButton("Voltar ao inicio");
+        botaovoltar.setBounds(400,520,200,40);
+        botaovoltar.setHorizontalTextPosition(SwingConstants.CENTER);
+        botaovoltar.setVerticalTextPosition(SwingConstants.BOTTOM);
+        botaovoltar.setFocusPainted(false);
+        botaovoltar.setBackground(Color.BLACK);
+        botaovoltar.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+        telacadastro.add(botaovoltar);
 
         telacadastro.add(fundodetela);
 
