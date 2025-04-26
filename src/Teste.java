@@ -95,26 +95,37 @@ public class Teste {
         fundodetela.setLayout(null);
 
 
-        JLabel nomedodono = new JLabel("Digite o Nome Completo do Proprietário do veiculo: ");
-        nomedodono.setBounds(150, 100, 300, 100);
+        JLabel nomedodono = new JLabel("Digite o Nome do Proprietário: ");
+        nomedodono.setBounds(150, 100, 300, 200);
         nomedodono.setForeground(Color.WHITE);
         telacadastro.add(nomedodono);
         JTextField camponome = new JTextField(50);
-        camponome.setBounds(450, 50, 200, 30);
+        camponome.setBounds(325, 190, 300, 20);
         telacadastro.add(camponome);
 
         JLabel modelocarro = new JLabel("Digite o modelo do carro: ");
-        modelocarro.setBounds(50,50,400,30);
+        modelocarro.setBounds(150,170,300,200);
+        modelocarro.setForeground(Color.WHITE);
         telacadastro.add(modelocarro);
         JTextField campomodelo = new JTextField(50);
-        campomodelo.setBounds(450,50,200,30);
+        campomodelo.setBounds(300,258,300,20);
         telacadastro.add(campomodelo);
 
-        JLabel anocarro = new JLabel("Digite o ano do carro");
-        JTextField campoano = new JTextField(10);
+        JLabel anocarro = new JLabel("Digite o ano do carro: ");
+        anocarro.setBounds(150,240,300,200);
+        anocarro.setForeground(Color.WHITE);
+        telacadastro.add(anocarro);
+        JTextField campoano = new JTextField(50);
+        campoano.setBounds(280,330,300,20);
+        telacadastro.add(campoano);
 
         JLabel placacarro = new JLabel("Digite a placa do carro: ");
-        JTextField campocplaca = new JTextField(10);
+        placacarro.setBounds(150,310,300,200);
+        placacarro.setForeground(Color.WHITE);
+        telacadastro.add(placacarro);
+        JTextField campocplaca = new JTextField(50);
+        campocplaca.setBounds(290,399,300,20);
+        telacadastro.add(campocplaca);
 
         JButton botaoconfimar = new JButton("Confirmar");
         botaoconfimar.addActionListener(e -> JOptionPane.showMessageDialog(null,"Veiculo cadastrado com sucesso"));
