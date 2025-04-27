@@ -10,4 +10,7 @@ Link: https://github.com/Frinng/Projeto-C
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Abaixo, você pode conferir um GIF demonstrando a interface que desenvolvi em funcionamento. Nele é possível visualizar a interação do usuário com o sistema, bem como o fluxo das funcionalidades implementadas. Achei interessante incluir essa demonstração para que fique mais fácil entender, na prática, como a aplicação se comporta e como a interface facilita o uso do programa.
+
 ![Interface](https://github.com/user-attachments/assets/2b4b8a7c-d601-473a-8ae5-73e8c747ab76)
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
