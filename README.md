@@ -1,1 +1,3 @@
 Este projeto é uma reimplementação do código original da pré-SA, que anteriormente estava escrito em C. Decidi refatorá-lo completamente, migrando para Java, e aproveitei para desenvolver uma interface gráfica que torna a utilização da aplicação muito mais intuitiva e acessível. Além da mudança de linguagem, busquei organizar melhor a estrutura do código e adicionar melhorias na usabilidade.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
