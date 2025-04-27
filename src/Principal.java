@@ -56,9 +56,19 @@ public class Principal {
         contratar_servicos.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         fundodetela.add(contratar_servicos);
 
+        JButton contatos = new JButton("3-Nossos Contatos");
+        contatos.setBounds(400,320,200,40);
+        contatos.setForeground(Color.WHITE);
+        contatos.setBackground(Color.BLACK);
+        contatos.setHorizontalTextPosition(SwingConstants.CENTER);
+        contatos.setVerticalTextPosition(SwingConstants.BOTTOM);
+        contatos.setFocusPainted(false);
+        contatos.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+        fundodetela.add(contatos);
+
         //butao para sair
-        JButton sair = new JButton("3-Sair");//bem autoexplicativo ne
-        sair.setBounds(400,320,200,40);
+        JButton sair = new JButton("4-Sair");//bem autoexplicativo ne
+        sair.setBounds(400,380,200,40);
         sair.setForeground(Color.WHITE);
         sair.setBackground(Color.BLACK);
         sair.setHorizontalTextPosition(SwingConstants.CENTER);
@@ -69,6 +79,7 @@ public class Principal {
 
         cadastro_de_veiculos.addActionListener(e -> Cadastrodeveiculos());
         contratar_servicos.addActionListener(e -> Nossosservicos());
+        contatos.addActionListener(e -> contatos());
         sair.addActionListener(e -> System.exit(0));
 
         tela.setContentPane(fundodetela);//imagem de fundo
@@ -649,5 +660,57 @@ public class Principal {
         tela.setResizable(false);
         tela.setLocationRelativeTo(null);
         tela.setVisible(true);
+    }
+    public static void contatos(){
+        tela.getContentPane().removeAll();
+        tela.repaint();
+
+        JPanel telacontatos= new JPanel(null);
+        ImageIcon fundodetelapng2 = new ImageIcon("Fundodetela.png");
+        Image ibagem = fundodetelapng2.getImage();
+        Image ibagemcerta = ibagem.getScaledInstance(1000,700,Image.SCALE_SMOOTH);
+        fundodetelapng2 =new ImageIcon(ibagemcerta);
+
+        JLabel fundodetela2 = new JLabel(fundodetelapng2);
+        fundodetela2.setHorizontalAlignment(SwingConstants.CENTER);
+        fundodetela2.setVerticalAlignment(SwingConstants.CENTER);
+        fundodetela2.setBounds(0,0,1000,700);
+        fundodetela2.setLayout(null);
+
+        JLabel zap = new JLabel("Nosso WhatsApp: (31)96969-6969");
+        zap.setBounds(150,100,300,200);
+        zap.setForeground(Color.WHITE);
+        telacontatos.add(zap);
+
+        JLabel instagram = new JLabel("Nosso Instagram: @PowerUP_AutoPeças_OFC");
+        instagram.setBounds(150,150,300,200);
+        instagram.setForeground(Color.WHITE);
+        telacontatos.add(instagram);
+
+        JLabel email = new JLabel("Nosso Email: PowerUpAuto@gmail.com");
+        email.setBounds(150,200,300,200);
+        email.setForeground(Color.WHITE);
+        telacontatos.add(email);
+
+        JButton voltar = new JButton("Voltar");
+        voltar.setBounds(410,380,200,40);
+        voltar.setHorizontalTextPosition(SwingConstants.CENTER);
+        voltar.setVerticalTextPosition(SwingConstants.BOTTOM);
+        voltar.setForeground(Color.WHITE);
+        voltar.setFocusPainted(false);
+        voltar.setBackground(Color.BLACK);
+        voltar.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+        telacontatos.add(voltar);
+
+        voltar.addActionListener(e -> telainical());
+
+        telacontatos.add(fundodetela2);
+
+        tela.setContentPane(telacontatos);//imagem de fundo
+        tela.setResizable(false);
+        tela.setLocationRelativeTo(null);
+        tela.setVisible(true);
+
+
     }
 }
