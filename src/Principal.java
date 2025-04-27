@@ -68,6 +68,7 @@ public class Principal {
         fundodetela.add(sair);
 
         cadastro_de_veiculos.addActionListener(e -> Cadastrodeveiculos());
+        contratar_servicos.addActionListener(e -> Nossosservicos());
         sair.addActionListener(e -> System.exit(0));
 
         tela.setContentPane(fundodetela);//imagem de fundo
@@ -132,6 +133,7 @@ public class Principal {
         botaoconfimar.setBounds(400,470,200,40);
         botaoconfimar.setHorizontalTextPosition(SwingConstants.CENTER);
         botaoconfimar.setVerticalTextPosition(SwingConstants.BOTTOM);
+        botaoconfimar.setForeground(Color.WHITE);
         botaoconfimar.setFocusPainted(false);
         botaoconfimar.setBackground(Color.BLACK);
         botaoconfimar.setBorder(BorderFactory.createLineBorder(Color.BLACK));
@@ -150,6 +152,7 @@ public class Principal {
         botaovoltar.setBounds(400,520,200,40);
         botaovoltar.setHorizontalTextPosition(SwingConstants.CENTER);
         botaovoltar.setVerticalTextPosition(SwingConstants.BOTTOM);
+        botaovoltar.setForeground(Color.WHITE);
         botaovoltar.setFocusPainted(false);
         botaovoltar.setBackground(Color.BLACK);
         botaovoltar.setBorder(BorderFactory.createLineBorder(Color.BLACK));
@@ -163,5 +166,82 @@ public class Principal {
         tela.setLocationRelativeTo(null);
         tela.setVisible(true);
     }
+    public static void Nossosservicos(){
+        tela.getContentPane().removeAll();
+        tela.repaint();
 
+        JPanel telaservicos = new JPanel(null);
+
+        ImageIcon fundodetelapng2 = new ImageIcon("Fundodetela.png");
+        Image ibagem = fundodetelapng2.getImage();
+        Image ibagemcerta = ibagem.getScaledInstance(1000,700,Image.SCALE_SMOOTH);
+        fundodetelapng2 =new ImageIcon(ibagemcerta);
+
+        JLabel fundodetela2 = new JLabel(fundodetelapng2);
+        fundodetela2.setHorizontalAlignment(SwingConstants.CENTER);
+        fundodetela2.setVerticalAlignment(SwingConstants.CENTER);
+        fundodetela2.setBounds(0,0,1000,700);
+        fundodetela2.setLayout(null);
+
+        JButton butaotrocadeole = new JButton("1-Troca de oléo");
+        butaotrocadeole.setBounds(400,200,200,40);
+        butaotrocadeole.setHorizontalTextPosition(SwingConstants.CENTER);
+        butaotrocadeole.setVerticalTextPosition(SwingConstants.BOTTOM);
+        butaotrocadeole.setForeground(Color.WHITE);
+        butaotrocadeole.setFocusPainted(false);
+        butaotrocadeole.setBackground(Color.BLACK);
+        butaotrocadeole.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+        telaservicos.add(butaotrocadeole);
+
+
+
+        JButton butaoalinhamento = new JButton("2-Alinhamento e balanceamento");
+        butaoalinhamento.setBounds(400,260,200,40);
+        butaoalinhamento.setHorizontalTextPosition(SwingConstants.CENTER);
+        butaoalinhamento.setVerticalTextPosition(SwingConstants.BOTTOM);
+        butaoalinhamento.setForeground(Color.WHITE);
+        butaoalinhamento.setFocusPainted(false);
+        butaoalinhamento.setBackground(Color.BLACK);
+        butaoalinhamento.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+        telaservicos.add(butaoalinhamento);
+
+        JButton butaorevisao = new JButton("3-Revisão de freios");
+        butaorevisao.setBounds(400,320,200,40);
+        butaorevisao.setHorizontalTextPosition(SwingConstants.CENTER);
+        butaorevisao.setVerticalTextPosition(SwingConstants.BOTTOM);
+        butaorevisao.setForeground(Color.WHITE);
+        butaorevisao.setFocusPainted(false);
+        butaorevisao.setBackground(Color.BLACK);
+        butaorevisao.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+        telaservicos.add(butaorevisao);
+
+        JButton butaosuspensao = new JButton("4-Suspensão e direção");
+        butaosuspensao.setBounds(400,380,200,40);
+        butaosuspensao.setHorizontalTextPosition(SwingConstants.CENTER);
+        butaosuspensao.setVerticalTextPosition(SwingConstants.BOTTOM);
+        butaosuspensao.setForeground(Color.WHITE);
+        butaosuspensao.setFocusPainted(false);
+        butaosuspensao.setBackground(Color.BLACK);
+        butaosuspensao.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+        telaservicos.add(butaosuspensao);
+
+        JButton butaomotor = new JButton("5-Reparos no motor");
+        butaomotor.setBounds(400,440,200,40);
+        butaomotor.setHorizontalTextPosition(SwingConstants.CENTER);
+        butaomotor.setVerticalTextPosition(SwingConstants.BOTTOM);
+        butaomotor.setForeground(Color.WHITE);
+        butaomotor.setFocusPainted(false);
+        butaomotor.setBackground(Color.BLACK);
+        butaomotor.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+        telaservicos.add(butaomotor);
+
+
+
+        telaservicos.add(fundodetela2);
+
+        tela.setContentPane(telaservicos);
+        tela.setResizable(false);
+        tela.setLocationRelativeTo(null);
+        tela.setVisible(true);
+    }
 }
