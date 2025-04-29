@@ -43,10 +43,10 @@ public class Principal {
         cadastro_de_veiculos.setVerticalTextPosition(SwingConstants.BOTTOM);//e deixa o texto dentro do botao
         cadastro_de_veiculos.setFocusPainted(false);//tira o foco do botao quando clicado
         cadastro_de_veiculos.setBorder(BorderFactory.createLineBorder(Color.BLACK));//cria uma borda preta em volta dos botowes
-        fundodetela.add(cadastro_de_veiculos);
+        telainicio.add(cadastro_de_veiculos);
 
         //Butao para contratar servicos
-        JButton contratar_servicos = new JButton("2-Nossos Servicos");//botao apra contratar os servicos da autopecas
+        JButton contratar_servicos = new JButton("2-Nossos Serviços");//botao apra contratar os servicos da autopecas
         contratar_servicos.setBounds(400,260,200,40);
         contratar_servicos.setForeground(Color.WHITE);
         contratar_servicos.setBackground(Color.BLACK);
@@ -54,7 +54,7 @@ public class Principal {
         contratar_servicos.setVerticalTextPosition(SwingConstants.BOTTOM);
         contratar_servicos.setFocusPainted(false);// Remove o foco (contorno quando clicado)
         contratar_servicos.setBorder(BorderFactory.createLineBorder(Color.BLACK));
-        fundodetela.add(contratar_servicos);
+        telainicio.add(contratar_servicos);
 
         JButton contatos = new JButton("3-Nossos Contatos");
         contatos.setBounds(400,320,200,40);
@@ -64,7 +64,7 @@ public class Principal {
         contatos.setVerticalTextPosition(SwingConstants.BOTTOM);
         contatos.setFocusPainted(false);
         contatos.setBorder(BorderFactory.createLineBorder(Color.BLACK));
-        fundodetela.add(contatos);
+        telainicio.add(contatos);
 
         //butao para sair
         JButton sair = new JButton("4-Sair");//bem autoexplicativo ne
@@ -75,14 +75,15 @@ public class Principal {
         sair.setVerticalTextPosition(SwingConstants.BOTTOM);
         sair.setFocusPainted(false);// Remove o foco (contorno quando clicado)
         sair.setBorder(BorderFactory.createLineBorder(Color.BLACK));
-        fundodetela.add(sair);
+        telainicio.add(sair);
 
         cadastro_de_veiculos.addActionListener(e -> Cadastrodeveiculos());
         contratar_servicos.addActionListener(e -> Nossosservicos());
         contatos.addActionListener(e -> contatos());
         sair.addActionListener(e -> System.exit(0));
 
-        tela.setContentPane(fundodetela);//imagem de fundo
+        telainicio.add(fundodetela);
+        tela.setContentPane(telainicio);
         fundodetela.setLayout(null);
         tela.setResizable(false);
         tela.setLocationRelativeTo(null);
@@ -315,7 +316,7 @@ public class Principal {
         valor.setForeground(Color.WHITE);
         telatrocadeoleo.add(valor);
 
-        JLabel confirmacao = new JLabel("Deseja Agendar o servico?");
+        JLabel confirmacao = new JLabel("Deseja Agendar o serviço?");
         confirmacao.setBounds(410,200,300,300);
         confirmacao.setForeground(Color.WHITE);
         telatrocadeoleo.add(confirmacao);
@@ -330,7 +331,7 @@ public class Principal {
         sim.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         telatrocadeoleo.add(sim);
 
-        JButton nao = new JButton("NÂO");
+        JButton nao = new JButton("NÃO");
         nao.setBounds(540,380,200,40);
         nao.setHorizontalTextPosition(SwingConstants.CENTER);
         nao.setVerticalTextPosition(SwingConstants.BOTTOM);
@@ -340,7 +341,7 @@ public class Principal {
         nao.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         telatrocadeoleo.add(nao);
 
-        sim.addActionListener(e -> JOptionPane.showMessageDialog(null,"Não temos horario disponivel."));
+        sim.addActionListener(e -> listahorarios());
         nao.addActionListener(e -> Nossosservicos());
 
 
@@ -377,7 +378,7 @@ public class Principal {
         valor.setForeground(Color.WHITE);
         telaalinhamento.add(valor);
 
-        JLabel confirmacao = new JLabel("Deseja Agendar o servico?");
+        JLabel confirmacao = new JLabel("Deseja Agendar o serviço?");
         confirmacao.setBounds(410,200,300,300);
         confirmacao.setForeground(Color.WHITE);
         telaalinhamento.add(confirmacao);
@@ -392,7 +393,7 @@ public class Principal {
         sim.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         telaalinhamento.add(sim);
 
-        JButton nao = new JButton("NÂO");
+        JButton nao = new JButton("NÃO");
         nao.setBounds(540,380,200,40);
         nao.setHorizontalTextPosition(SwingConstants.CENTER);
         nao.setVerticalTextPosition(SwingConstants.BOTTOM);
@@ -402,7 +403,7 @@ public class Principal {
         nao.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         telaalinhamento.add(nao);
 
-        sim.addActionListener(e -> JOptionPane.showMessageDialog(null,"Não temos horario disponivel."));
+        sim.addActionListener(e -> listahorarios());
         nao.addActionListener(e -> Nossosservicos());
 
 
@@ -439,7 +440,7 @@ public class Principal {
         valor.setForeground(Color.WHITE);
         telarevisao.add(valor);
 
-        JLabel confirmacao = new JLabel("Deseja Agendar o servico?");
+        JLabel confirmacao = new JLabel("Deseja Agendar o serviço?");
         confirmacao.setBounds(410,200,300,300);
         confirmacao.setForeground(Color.WHITE);
         telarevisao.add(confirmacao);
@@ -454,7 +455,7 @@ public class Principal {
         sim.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         telarevisao.add(sim);
 
-        JButton nao = new JButton("NÂO");
+        JButton nao = new JButton("NÃO");
         nao.setBounds(540,380,200,40);
         nao.setHorizontalTextPosition(SwingConstants.CENTER);
         nao.setVerticalTextPosition(SwingConstants.BOTTOM);
@@ -464,7 +465,7 @@ public class Principal {
         nao.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         telarevisao.add(nao);
 
-        sim.addActionListener(e -> JOptionPane.showMessageDialog(null,"Não temos horario disponivel."));
+        sim.addActionListener(e -> listahorarios());
         nao.addActionListener(e -> Nossosservicos());
 
 
@@ -501,7 +502,7 @@ public class Principal {
         valor.setForeground(Color.WHITE);
         telasuspensao.add(valor);
 
-        JLabel confirmacao = new JLabel("Deseja Agendar o servico?");
+        JLabel confirmacao = new JLabel("Deseja Agendar o serviço?");
         confirmacao.setBounds(410,200,300,300);
         confirmacao.setForeground(Color.WHITE);
         telasuspensao.add(confirmacao);
@@ -516,7 +517,7 @@ public class Principal {
         sim.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         telasuspensao.add(sim);
 
-        JButton nao = new JButton("NÂO");
+        JButton nao = new JButton("NÃO");
         nao.setBounds(540,380,200,40);
         nao.setHorizontalTextPosition(SwingConstants.CENTER);
         nao.setVerticalTextPosition(SwingConstants.BOTTOM);
@@ -526,7 +527,7 @@ public class Principal {
         nao.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         telasuspensao.add(nao);
 
-        sim.addActionListener(e -> JOptionPane.showMessageDialog(null,"Não temos horario disponivel."));
+        sim.addActionListener(e -> listahorarios());
         nao.addActionListener(e -> Nossosservicos());
 
 
@@ -563,7 +564,7 @@ public class Principal {
         valor.setForeground(Color.WHITE);
         telareparosmotor.add(valor);
 
-        JLabel confirmacao = new JLabel("Deseja Agendar o servico?");
+        JLabel confirmacao = new JLabel("Deseja Agendar o serviço?");
         confirmacao.setBounds(410,200,300,300);
         confirmacao.setForeground(Color.WHITE);
         telareparosmotor.add(confirmacao);
@@ -578,7 +579,7 @@ public class Principal {
         sim.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         telareparosmotor.add(sim);
 
-        JButton nao = new JButton("NÂO");
+        JButton nao = new JButton("NÃO");
         nao.setBounds(540,380,200,40);
         nao.setHorizontalTextPosition(SwingConstants.CENTER);
         nao.setVerticalTextPosition(SwingConstants.BOTTOM);
@@ -588,7 +589,7 @@ public class Principal {
         nao.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         telareparosmotor.add(nao);
 
-        sim.addActionListener(e -> JOptionPane.showMessageDialog(null,"Não temos horario disponivel."));
+        sim.addActionListener(e -> listahorarios());
         nao.addActionListener(e -> Nossosservicos());
 
 
@@ -625,7 +626,7 @@ public class Principal {
         valor.setForeground(Color.WHITE);
         telatransmissaor.add(valor);
 
-        JLabel confirmacao = new JLabel("Deseja Agendar o servico?");
+        JLabel confirmacao = new JLabel("Deseja Agendar o serviço?");
         confirmacao.setBounds(410,200,300,300);
         confirmacao.setForeground(Color.WHITE);
         telatransmissaor.add(confirmacao);
@@ -640,7 +641,7 @@ public class Principal {
         sim.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         telatransmissaor.add(sim);
 
-        JButton nao = new JButton("NÂO");
+        JButton nao = new JButton("NÃO");
         nao.setBounds(540,380,200,40);
         nao.setHorizontalTextPosition(SwingConstants.CENTER);
         nao.setVerticalTextPosition(SwingConstants.BOTTOM);
@@ -650,7 +651,7 @@ public class Principal {
         nao.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         telatransmissaor.add(nao);
 
-        sim.addActionListener(e -> JOptionPane.showMessageDialog(null,"Não temos horario disponivel."));
+        sim.addActionListener(e -> listahorarios());
         nao.addActionListener(e -> Nossosservicos());
 
 
@@ -710,7 +711,61 @@ public class Principal {
         tela.setResizable(false);
         tela.setLocationRelativeTo(null);
         tela.setVisible(true);
+    }
+    public static void listahorarios(){
+        tela.getContentPane().removeAll();
+        tela.repaint();
+
+        JPanel listahorarios = new JPanel(null);
+        ImageIcon fundotela3png = new ImageIcon("Fundodetela.png");
+        Image ibagen = fundotela3png.getImage();
+        Image ibagencerta = ibagen.getScaledInstance(1000,700,Image.SCALE_SMOOTH);
+        fundotela3png = new ImageIcon(ibagencerta);
+
+        JLabel fundodetela3 = new JLabel(fundotela3png);
+        fundodetela3.setHorizontalAlignment(SwingConstants.CENTER);
+        fundodetela3.setVerticalAlignment(SwingConstants.CENTER);
+        fundodetela3.setBounds(0,0,1000,700);
+        fundodetela3.setLayout(null);// Desativa o LayoutManager padrão do JLabel, permitindo posicionar manualmente os componentes
+
+        JLabel mensagem = new JLabel("Infelizmente, no momento não há horários disponíveis.");
+        mensagem.setBounds(150,100,600,300);
+        mensagem.setForeground(Color.WHITE);
+        listahorarios.add(mensagem);
+
+        JLabel mensagem1 = new JLabel("Para obter mais informações ou esclarecer dúvidas, solicitamos que entre em contato conosco");
+        mensagem1.setBounds(150,120,600,300);
+        mensagem1.setForeground(Color.WHITE);
+        listahorarios.add(mensagem1);
+
+        JButton contatos = new JButton("Dados para Contato");
+        contatos.setBounds(410,320,200,40);
+        contatos.setHorizontalTextPosition(SwingConstants.CENTER);
+        contatos.setVerticalTextPosition(SwingConstants.BOTTOM);
+        contatos.setForeground(Color.WHITE);
+        contatos.setBackground(Color.BLACK);
+        contatos.setFocusPainted(false);
+        contatos.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+        listahorarios.add(contatos);
 
 
+        JButton botaovoltar = new JButton("Voltar");
+        botaovoltar.setBounds(410,380,200,40);
+        botaovoltar.setHorizontalTextPosition(SwingConstants.CENTER);
+        botaovoltar.setVerticalTextPosition(SwingConstants.BOTTOM);
+        botaovoltar.setForeground(Color.WHITE);
+        botaovoltar.setFocusPainted(false);
+        botaovoltar.setBackground(Color.BLACK);
+        botaovoltar.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+        listahorarios.add(botaovoltar);
+
+        contatos.addActionListener(e -> contatos());
+        botaovoltar.addActionListener(e -> Nossosservicos());
+
+        listahorarios.add(fundodetela3);
+        tela.setContentPane(listahorarios);
+        tela.setResizable(false);
+        tela.setLocationRelativeTo(null);
+        tela.setVisible(true);
     }
 }
