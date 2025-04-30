@@ -169,6 +169,7 @@ public class Principal {
         botaovoltar.setBackground(Color.BLACK);
         botaovoltar.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         telacadastro.add(botaovoltar);
+
         botaovoltar.addActionListener(e -> telainical());
 
         telacadastro.add(fundodetela);
@@ -341,7 +342,7 @@ public class Principal {
         nao.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         telatrocadeoleo.add(nao);
 
-        sim.addActionListener(e -> listahorarios());
+        sim.addActionListener(e -> Horariostrocadeoleo());
         nao.addActionListener(e -> Nossosservicos());
 
 
@@ -784,6 +785,15 @@ public class Principal {
         fundodetela3.setBounds(0,0,1000,700);
         fundodetela3.setLayout(null);
 
+        JButton botaosim = new JButton("Marcar");
+        botaosim.setBounds(410,320,200,40);
+        botaosim.setHorizontalTextPosition(SwingConstants.CENTER);
+        botaosim.setVerticalTextPosition(SwingConstants.BOTTOM);
+        botaosim.setForeground(Color.WHITE);
+        botaosim.setFocusPainted(false);
+        botaosim.setBackground(Color.BLACK);
+        botaosim.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+        horariostrocadeoleo.add(botaosim);
 
         JButton botaovoltar = new JButton("Voltar");
         botaovoltar.setBounds(410,380,200,40);
@@ -795,6 +805,8 @@ public class Principal {
         botaovoltar.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         horariostrocadeoleo.add(botaovoltar);
 
+        botaosim.addActionListener(e-> JOptionPane.showMessageDialog(null,"Horario Marcado."));
+        botaovoltar.addActionListener(e-> trocadeoleo());
 
         horariostrocadeoleo.add(fundodetela3);
         tela.setContentPane(horariostrocadeoleo);
