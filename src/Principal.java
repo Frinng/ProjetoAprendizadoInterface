@@ -768,4 +768,20 @@ public class Principal {
         tela.setLocationRelativeTo(null);
         tela.setVisible(true);
     }
+    public static void MarcarHorarios(){
+        tela.getContentPane().removeAll();
+        tela.repaint();
+
+        JPanel listahorarios = new JPanel(null);
+        ImageIcon fundotela4png = new ImageIcon("Fundodetela.png");
+        Image ibagen = fundotela4png.getImage();
+        Image ibagencerta = ibagen.getScaledInstance(1000,700,Image.SCALE_SMOOTH);
+        fundotela4png = new ImageIcon(ibagencerta);
+
+        JLabel fundodetela3 = new JLabel(fundotela4png);
+        fundodetela3.setHorizontalAlignment(SwingConstants.CENTER);
+        fundodetela3.setVerticalAlignment(SwingConstants.CENTER);
+        fundodetela3.setBounds(0,0,1000,700);
+        fundodetela3.setLayout(null);
+    }
 }
