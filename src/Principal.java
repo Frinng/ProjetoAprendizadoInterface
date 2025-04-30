@@ -786,7 +786,7 @@ public class Principal {
         fundodetela3.setLayout(null);
 
         JButton botaosim = new JButton("Marcar");
-        botaosim.setBounds(410,320,200,40);
+        botaosim.setBounds(410,380,200,40);
         botaosim.setHorizontalTextPosition(SwingConstants.CENTER);
         botaosim.setVerticalTextPosition(SwingConstants.BOTTOM);
         botaosim.setForeground(Color.WHITE);
@@ -796,7 +796,7 @@ public class Principal {
         horariostrocadeoleo.add(botaosim);
 
         JButton botaovoltar = new JButton("Voltar");
-        botaovoltar.setBounds(410,380,200,40);
+        botaovoltar.setBounds(410,440,200,40);
         botaovoltar.setHorizontalTextPosition(SwingConstants.CENTER);
         botaovoltar.setVerticalTextPosition(SwingConstants.BOTTOM);
         botaovoltar.setForeground(Color.WHITE);
