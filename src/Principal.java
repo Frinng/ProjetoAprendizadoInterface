@@ -768,11 +768,11 @@ public class Principal {
         tela.setLocationRelativeTo(null);
         tela.setVisible(true);
     }
-    public static void MarcarHorarios(){
+    public static void Horariostrocadeoleo(){
         tela.getContentPane().removeAll();
         tela.repaint();
 
-        JPanel listahorarios = new JPanel(null);
+        JPanel horariostrocadeoleo = new JPanel(null);
         ImageIcon fundotela4png = new ImageIcon("Fundodetela.png");
         Image ibagen = fundotela4png.getImage();
         Image ibagencerta = ibagen.getScaledInstance(1000,700,Image.SCALE_SMOOTH);
@@ -783,5 +783,23 @@ public class Principal {
         fundodetela3.setVerticalAlignment(SwingConstants.CENTER);
         fundodetela3.setBounds(0,0,1000,700);
         fundodetela3.setLayout(null);
+
+
+        JButton botaovoltar = new JButton("Voltar");
+        botaovoltar.setBounds(410,380,200,40);
+        botaovoltar.setHorizontalTextPosition(SwingConstants.CENTER);
+        botaovoltar.setVerticalTextPosition(SwingConstants.BOTTOM);
+        botaovoltar.setForeground(Color.WHITE);
+        botaovoltar.setFocusPainted(false);
+        botaovoltar.setBackground(Color.BLACK);
+        botaovoltar.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+        horariostrocadeoleo.add(botaovoltar);
+
+
+        horariostrocadeoleo.add(fundodetela3);
+        tela.setContentPane(horariostrocadeoleo);
+        tela.setResizable(false);
+        tela.setLocationRelativeTo(null);
+        tela.setVisible(true);
     }
 }
