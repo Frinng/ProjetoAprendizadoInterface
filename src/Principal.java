@@ -1,5 +1,8 @@
 import javax.swing.*;
 import java.awt.*;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 
 public class Principal {
     static JFrame tela; //tela fixa
@@ -814,4 +817,14 @@ public class Principal {
         tela.setLocationRelativeTo(null);
         tela.setVisible(true);
     }
+    public static void SalvarCarros(){
+        try (PrintWriter escreva = new PrintWriter(new FileWriter("Carros.txt"))){//sso significa que o programa vai tentar executar um código que pode gerar um erro. Se algum erro acontecer, o programa vai lidar com isso na parte catch
+            for (Carro carro : listacarros){
+                escreva.println(carro.toString());
+            }
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+
 }
