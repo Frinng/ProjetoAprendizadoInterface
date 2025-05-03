@@ -17,4 +17,11 @@ public class Carro {
                 " ano: "+ano+
                 "placa: "+placa;
     }
+    public static Carro fromString(String linha){
+        String[] partes = linha.split(";");
+        if(partes.length == 4){
+            return new Carro(partes[0], partes[1], partes[2], partes[3]);
+        }
+        return null;
+    }
 }
